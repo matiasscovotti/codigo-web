@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <title>Código - EDUCABOT</title>
+    <meta name="description" content="Editor HTML"/>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,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">    
+    <!--  fontawesome css plugins -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+	<!-- menu material -->
+	<link href="menu/base.min.css" rel="stylesheet">
+
+    <link href="assets/js/vendor/jquery.splitter/css/jquery.splitter.css" rel="stylesheet"/>
+    <!-- gray theme - splitter
+    <link href="assets/js/vendor/jquery.splitter/css/clean.jquery.splitter.css" rel="stylesheet"/> -->
+    <script src="assets/js/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/js/vendor/jquery.splitter/js/splitter.js"></script>
+    <script src="node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="node_modules/codemirror/mode/xml/xml.js"></script>
+    <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="node_modules/codemirror/mode/css/css.js"></script>
+    <script src="node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="node_modules/codemirror/addon/selection/active-line.js"></script>
+    <script src="node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="node_modules/codemirror/addon/comment/continuecomment.js"></script>
+    <script src="node_modules/codemirror/addon/comment/comment.js"></script>
+    <script src="node_modules/codemirror/addon/edit/closetag.js"></script>
+    <script src="node_modules/codemirror/addon/edit/closebrackets.js"></script>
+    <script src="assets/js/vendor/emmet/emmet.js"></script>
+    <script src="node_modules/nprogress/nprogress.js"></script>
+
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css"/>
+    <link rel="stylesheet" href="assets/css/app-htmledito.css">
+    <link href="node_modules/nprogress/nprogress.css" rel="stylesheet"/>
+
+    <!-- styles for HTMLEdito code highligter themes -->
+    <link rel="stylesheet" href="node_modules/codemirror/theme/monokai.css"/>
+    <script>
+    	jQuery(function($){
+    		NProgress.done(true);
+    	});
+    </script>
+    <script src="assets/js/vendor/dw_fontsizer/js/dw_event.js" type="text/javascript"></script>
+    <script src="assets/js/vendor/dw_fontsizer/js/dw_cookies.js" type="text/javascript"></script>
+    <script src="assets/js/vendor/dw_fontsizer/js/dw_sizerdx.js" type="text/javascript"></script>
+    <script>
+    dw_fontSizerDX.setDefaults("px", 13, 12, 26, ['div.CodeMirror'] );
+
+    dw_Event.add( window, 'load', dw_fontSizerDX.init );
+    </script>
+  </head>
+ <body  style=" overflow: hidden; width: 100%;   ">
+    
+    <header class="header header-transparent header-waterfall ui-header" id="header" role="banner">
+  <!--      <ul class="nav nav-list pull-left">
+        <li>
+            <a data-toggle="menu" href="#ui_menu">
+                <span class="icon icon-lg">menu</span>
+            </a>
+        </li>
+    </ul> -->
+    <div id="headermenu" role="navigation">
+        <div class="about">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Educabot" style="padding-top: 3px; padding-left: 10px; padding-right: 20px;">
+            </a>  
+        </div>
+        <div class="font-sizer" style="padding-right: 20px;">
+          <span id="sizer">Tamaño de letra:&nbsp;&nbsp;
+            <a class="increase" href="#" title="Agrandar letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a>
+            <a class="decrease" href="#" title="Achicar letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a>
+            <a class="reset" href="#" title="Restaurar tamaño de letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+        </div>
+    </div>
+    <div class="download-button">
+      <input type="button" value="Descargar proyecto" onClick="download();" id="downloadbutton" class="topmenubutton">
+    </div>
+ <!--   <div class="col-xl-2 col-lg-2 d-none d-lg-block text-right">
+        <div class="run-button">
+          <button value="Ejecutar (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">Ejecutar (JS)&nbsp; <i class="far fa-play-circle"></i></button>
+        </div> -->
+   
+  </header>
+<!--
+<nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+    <div class="menu-scroll">
+        <div class="menu-content">
+            <a class="menu-logo" href="index.html">Índice</a>
+            <ul class="nav">
+                <li>
+                    <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_1">Proyectos</a>
+                    <ul class="menu-collapse collapse" id="ui_menu_1">
+                        <li>
+                            <a class="waves-attach" href="1.html"><span class="icon">videocam</span> Introducción</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="2.html"><span class="icon">videocam</span> ¿Qué es la robótica?</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="3.html"><span class="icon">description</span>Actividad 1</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="4.html"><span class="icon">videocam</span> Partes del robot</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="5.html"><span class="icon">description</span>Componentes del kit</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="3333.html"><span class="icon">description</span>Actividad 2</a>
+                        </li>
+                    </ul>
+                    <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_2">Refencias</a>
+                    <ul class="menu-collapse collapse" id="ui_menu_2">
+                        <li>
+                            <a class="waves-attach" href="1.html"><span class="icon">videocam</span> Introducción</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="2.html"><span class="icon">videocam</span> ¿Qué es la robótica?</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="3.html"><span class="icon">description</span>Actividad 1</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="4.html"><span class="icon">videocam</span> Partes del robot</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="5.html"><span class="icon">description</span>Componentes del kit</a>
+                        </li>
+                        <li>
+                            <a class="waves-attach" href="3333.html"><span class="icon">description</span>Actividad 2</a>
+                        </li>
+                    </ul>
+                </li>
+			</ul>
+        </div>
+    </div>
+</nav>
+-->
+  <main id="content" class="article">
+    <div id="widget">
+      <div id="foo">
+        <div id="codehtml">
+          <div class="codetypelabel" id="codetypelabelhtml">HTML</div>
+          <textarea id="codeeditorhtml" name="codeeditorhtml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</textarea>
+        </div>
+
+        <div id="codecss">
+          <div class="codetypelabel" id="codetypelabelcss">CSS</div>
+          <textarea id="codeeditorcss" name="codeeditorcss">
+/* CSS */
+
+
+
+          </textarea>
+        </div>
+      </div>
+      <div id="bar">
+        <div id="codejs">
+          <div class="codetypelabel" id="codetypelabeljs">JavaScript</div>
+          <textarea id="codeeditorjs" name="codeeditorjs">// JavaScript
+
+</textarea>
+        </div>
+        <div id="codepreview">
+          <div id="previewmask"></div>
+          <div id="previewoutputsize">Proyecto: <span id="outputsizenumber"></span></div>
+          <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/library.js"></script>
+  <script src="menu/base.min.js"></script>
+  <script src="menu/project.min.js"></script>
+  <script>
+
+        var HideMenuDialog = function(){
+      $('#librarymenu').hide();
+      $('#settingsmenu').hide();
+    }
+        $('textarea')
+            .focus(HideMenuDialog)
+  </script>
+  </body>
+</html>

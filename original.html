@@ -4,11 +4,28 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <title>Programación - EDUCABOT</title>
-    <meta name="description" content="Editor HTML"/>
+    <title>HTMLEdito</title>
+    <meta name="description" content="HTMLEdito is HTML Editor, CSS Editor and Javascript Editor script in one simple and user-friendly UI. It is build with HTML5, CSS3 and many javascript libraries"/>
 
     <!-- icons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/htmledito/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/htmledito/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/htmledito/favicon-16x16.png"/>
+    <link rel="manifest" href="assets/htmledito/site.webmanifest"/>
+    <link rel="mask-icon" href="assets/htmledito/safari-pinned-tab.svg" color="#5bbad5"/>
+    <link rel="shortcut icon" href="assets/htmledito/favicon.ico"/>
+    <meta name="msapplication-config" content="assets/htmledito/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="apple-mobile-web-app-title" content="HTMLEdito"/>
+    <meta name="application-name" content="HTMLEdito"/>
+
+    <!-- Social -->
+    <meta property="og:title" content="HTMLEdito"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="assets/img/htmledito.png"/>
+    <meta property="og:site_name" content="HTMLEdito"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:description" content="HTMLEdito is HTML Editor, CSS Editor and Javascript Editor script in one simple and user-friendly UI. It is build with HTML5, CSS3 and many javascript libraries"/>
 
     <link href="assets/js/vendor/jquery.splitter/css/jquery.splitter.css" rel="stylesheet"/>
     <!-- gray theme - splitter
@@ -45,10 +62,6 @@
     <link rel="stylesheet" href="node_modules/codemirror/theme/rubyblue.css"/>
     <link rel="stylesheet" href="node_modules/codemirror/theme/the-matrix.css"/>
     <link rel="stylesheet" href="node_modules/codemirror/theme/xq-light.css"/>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script>
     	jQuery(function($){
     		NProgress.done(true);
@@ -69,12 +82,12 @@
     <header id="header" role="banner">
       <div id="headermenu" role="navigation">
         <div class="about">
-          <img src="assets/images/logo2.svg" alt="Educabot" style="padding-top: 3px; padding-left: 10px; padding-right: 5px;max-height: 48px;">
+          <p><span class="brand"><span class="brand-span">HTML</span>Edito</span></p>
         </div>
         <div class="htmledito-settings">
-          <p class="theme-option"><span>Tema:</span>
+          <p class="theme-option"><span>Themes: </span>
             <select onchange="selectTheme()" id=select>
-              <option selected>predeterminado</option>
+              <option selected>default</option>
               <option>3024-day</option>
               <option>blackboard</option>
               <option>cobalt</option>
@@ -89,15 +102,72 @@
             </select>
           </p>
         </div>
-        <div class="download">
-          <input type="submit" class="download-button" value="Descargar" onClick="download();" id="downloadbutton">
+
+        <div class="font-sizer">
+          <span id="sizer">Font Size:&nbsp;&nbsp;<a class="increase" href="#" title="Increase text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a><a class="decrease" href="#" title="Decrease text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a><a class="reset" href="#" title="Restore default font-sizes"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+        </div>
+        <div class="run-button">
+          <input type="button" value="Run (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">
         </div>
 
+        <div class="generatormenu">
+          <input type="button" value="Library"  id="librarymenubutton" class="topmenubutton">
+          <div id="librarymenu"  class="topmenu">
+            <div class="css-libraries">
+              <div>Text | Images | Audio | Video</div>
+              <input type="button" value="Lorem" id="generator-ipsum">
+              <input type="button" value="&lt;img src&gt; 1" id="insert-img-src1">
+              <input type="button" value="&lt;img src&gt; 2" id="insert-img-src2">
+              <input type="button" value="&lt;audio&gt;" id="insert-audio">
+              <input type="button" value="&lt;video&gt;" id="insert-video">
+            </div>
+
+            <div class="css-libraries">
+              <div>CSS Libraries | CSS Framework</div>
+              <input type="button" value="url(image)" id="insert-url-img">
+              <!-- add custom CSS Library -->
+              <input type="button" value="normalize.css" id="normalizecss">
+              <!-- Bootstrap 3    // This is bootstrap library Example in library.js file-->
+              <input type="button" value="Bootstrap 3" id="bootstrap3">
+              <input type="button" value="Bootstrap 4" id="bootstrap4">
+              <input type="button" value="uikit 2" id="uikit2">
+              <input type="button" value="uikit 3" id="uikit3">
+              <br/>
+              <input type="button" value="foundation" id="foundation">
+              <input type="button" value="Bulma" id="bulma">
+              <input type="button" value="Materialize" id="materialize">
+              <input type="button" value="Semantic UI" id="semanticui">
+              <input type="button" value="MDL" id="mdl" title="Material Design Lite">
+              <input type="button" value="Font Awesome" id="fontawesome">
+            </div>
+
+            <div class="js-libraries jquery">
+              <div>JavaScript Libraries </div>
+              <!-- add custom Javascript Library -->
+              <input type="button" value="jQuery 1x" id="jquery1">
+              <input type="button" value="jQuery 2x" id="jquery2">
+              <input type="button" value="jQuery 3x" id="jquery3">
+              <input type="button" value="jQuery UI" id="jqueryui">
+              <input type="button" value="MooTools" id="MooTools">
+            </div>
+          </div>
+
+          <input type="button" value="Settings"  id="settingsmenubutton" class="topmenubutton">
+          <div id="settingsmenu"  class="topmenu">
+            <ul>
+              <li><input type="checkbox"  id="autopreviewcheckbox" checked="checked" /> Auto Run Js</li>
+              <li><input type="checkbox"  id="linewrappingcheckbox"/> Word Wrap</li>
+              <li><input type="checkbox"  id="autoclosetagscheckbox" checked="checked"/> Auto Close Tag</li>
+              <li><input type="checkbox"  id="layerpreview" /> Highlight Layer Mode</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div id="Dmenu-right">
           <input type="button" id="previewcompact" value="&nbsp;" title="compact view" onClick="previewdefault();" />
           <input type="button" id="previewnojs" value="&nbsp;" title="no js editor" onClick="nojsview();" />
-          <input type="text" value="" id="previewsizewidth" placeholder="Ancho" />
-          <input type="text" value="" id="previewsizeheight" placeholder="Alto" />
+          <input type="text" value="" id="previewsizewidth" placeholder="Width" />
+          <input type="text" value="" id="previewsizeheight" placeholder="Height" />
           <input type="button" id="fullpreview" value="&nbsp;" onClick="fullpreview();" />
           <input type="button" id="previewtablet" value="&nbsp;" onClick="previewdefault();" />
           <input type="button" id="previewphone-h" value="&nbsp;" onClick="previewdefault();" />
@@ -113,8 +183,10 @@
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
+    &lt;h1 contenteditable=&quot;true&quot; id=&quot;heading&quot;&gt;HTML&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</textarea>
         </div>
@@ -124,7 +196,12 @@
           <textarea id="codeeditorcss" name="codeeditorcss">
 /* CSS code */
 
+h1 {
+  font-family: Arial,sans-serif;
+  color: tomato;
+}
 
+.edito {color:green;}
           </textarea>
         </div>
       </div>
@@ -133,7 +210,8 @@
           <div class="codetypelabel" id="codetypelabeljs">JavaScript</div>
           <textarea id="codeeditorjs" name="codeeditorjs">// JavaScript code
 
-</textarea>
+var headerTag = document.getElementById('heading');
+headerTag.innerHTML += "&lt;span class='edito'&gt;Edito&lt;/span&gt;";</textarea>
         </div>
         <div id="codepreview">
           <div id="previewmask"></div>

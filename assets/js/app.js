@@ -16,8 +16,7 @@ function selectTheme() {
 
 // theme selection
 function selectTheme() {
-    // var e = input.options[input.selectedIndex].innerHTML;
-    var e = 'blackboard';
+    var e = input.options[input.selectedIndex].innerHTML;
      codeeditorhtml.setOption("theme", e);
      codeeditorcss.setOption("theme", e);
      codeeditorjs.setOption("theme", e)
@@ -540,74 +539,4 @@ $("#previewsizeheight").bind("input propertychange", function() {
     $("#previewsizeheight").keyup();
     this.value = this.value.replace(/[^0-9\,]/g, "")
 });
-var thisbutton;
-var codeinfostate;
-$("#codeinfo").click(function() {
-    thisbutton = $("#codeinfo");
-    $("#settingsmenu, #viewmenu, #librarymenu, #sharemenu").hide();
-    if (codeinfostate == 1) {
-        menubuttoninactive(thisbutton);
-        codeinfostate = 0
-    } else {
-        menubuttoninactive(".topmenubutton");
-        menubuttonactive(thisbutton);
-        codeinfostate = 1;
-        viewmenubuttonstate = 0;
-        settingsbuttonstate = 0;
-        librarybuttonstate = 0
-    }
-    $("#codeinfomenu").toggle()
-});
-var viewmenubuttonstate;
-$("#viewmenubutton").click(function() {
-    thisbutton = $("#viewmenubutton");
-    $("#codeinfomenu, #settingsmenu, #librarymenu, #sharemenu").hide();
-    if (viewmenubuttonstate == 1) {
-        menubuttoninactive(thisbutton);
-        viewmenubuttonstate = 0
-    } else {
-        menubuttoninactive(".topmenubutton");
-        menubuttonactive(thisbutton);
-        viewmenubuttonstate = 1;
-        codeinfostate = 0;
-        settingsbuttonstate = 0;
-        librarybuttonstate = 0
-    }
-    $("#viewmenu").toggle()
-});
-var settingsbuttonstate;
-$("#settingsmenubutton").click(function() {
-    thisbutton = $("#settingsmenubutton");
-    $("#codeinfomenu, #viewmenu, #librarymenu, #sharemenu").hide();
-    if (settingsbuttonstate == 1) {
-        menubuttoninactive(thisbutton);
-        settingsbuttonstate = 0
-    } else {
-        menubuttoninactive(".topmenubutton");
-        menubuttonactive(thisbutton);
-        settingsbuttonstate = 1;
-        codeinfostate = 0;
-        viewmenubuttonstate = 0;
-        librarybuttonstate = 0
-    }
-    $("#settingsmenu").toggle()
-});
-var librarybuttonstate;
-$("#librarymenubutton").click(function() {
-    thisbutton = $("#librarymenubutton");
-    $("#codeinfomenu, #viewmenu, #settingsmenu, #sharemenu").hide();
-    if (librarybuttonstate == 1) {
-        menubuttoninactive(thisbutton);
-        librarybuttonstate = 0
-    } else {
-        menubuttoninactive(".topmenubutton");
-        menubuttonactive(thisbutton);
-        librarybuttonstate = 1;
-        codeinfostate = 0;
-        viewmenubuttonstate = 0;
-        settingsbuttonstate = 0
-    }
-    $("#librarymenu").toggle()
-})
 
-;$(document).ready(function() { selectTheme(); });

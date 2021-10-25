@@ -3,6 +3,8 @@
  * Copyright 2017 AMPBlogger (https://www.codecanyon.net/user/ampblogger).
  * License: https://codecanyon.net/licenses/standard
  */
+
+ 
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'),
@@ -21,8 +23,9 @@
   local('SourceCodePro-Regular'),
   url(../fonts/SourceCodePro-Regular.woff2) format('woff2'),
   url('../fonts/SourceCodePro-Regular.ttf') format('truetype');
+
 }
-html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;word-wrap:break-word}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+html{font-family: 'DM Sans', sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;word-wrap:break-word}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -36,7 +39,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -46,7 +49,6 @@ body {
 *,
 body,
 button,
-input,
 textarea,
 select {
     text-rendering: optimizeLegibility;
@@ -157,7 +159,7 @@ hr {
 #librarymenubutton,
 #runcodebutton {
     margin: 0 0 0 -5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     color: #555;
     height: 50px;
@@ -306,7 +308,7 @@ hr {
     height: 70px;
 }
 #librarymenu input[type="button"] {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     color: #fff;
     background: #428BCD;
@@ -320,7 +322,7 @@ hr {
     margin-top: 5px
 }
 #librarymenu input[type="button"]:hover {
-    background: #2E71AE;
+    background: #42B3FF;
 }
 .topmenu input[type="checkbox"] {
     vertical-align: middle;
@@ -344,7 +346,7 @@ hr {
     font-weight: bold;
 }
 textarea {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     resize: none;
     width: 100%;
@@ -393,7 +395,7 @@ input[type="password"] {
     height: 25px;
     width: 40px;
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
 }
 iframe.codethumb {
@@ -447,7 +449,7 @@ only screen and (min-resolution:2dppx) {
 }
 .brand {
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     background-color: #EC0D8E;
     color: #fff;
@@ -461,7 +463,7 @@ only screen and (min-resolution:2dppx) {
     text-align: center;
 }
 .brand-span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background-color: #914C90;
     font-weight: 500;
     color: white;
@@ -475,9 +477,19 @@ only screen and (min-resolution:2dppx) {
 .about {
     float: left;
     margin-top: -2px;
-    margin-right: 20px;
+    margin-right: 5px;
     font-size: 1.2em;
 }
+
+
+
+.download {
+    float: left;
+    margin-top: 4px;
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
 #Dmenu-right {
     margin-top: 7px;
     margin-right: 3px;
@@ -493,6 +505,7 @@ only screen and (min-resolution:2dppx) {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    padding-right: 1%;
 }
 #Dmenu-right input[type="text"] {
     width: 50px;
@@ -502,13 +515,14 @@ only screen and (min-resolution:2dppx) {
 }
 div.htmledito-settings {
     float: left;
+    min-width: 180px;
 }
 div.htmledito-settings select {
     font-size: 1em;
 
 }
 select, .htmledito-settings select {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
     font-size: 14px;
     color: #777;
@@ -519,14 +533,14 @@ select, .htmledito-settings select {
     margin: 0 5px;
 }
 #runcodebutton:hover {
-    background: #428bca;
+    background: #42B3FF;
     color: white;
 }
 #runcodebutton:active {
     color: #555;
 }
 .topmenubutton:hover {
-    color: #428bca;
+    color: #42B3FF;
 }
 .topmenubutton:active {
     color: #555;
@@ -559,7 +573,7 @@ div.font-sizer img:hover {
 }
 a {
     text-decoration: none!important;
-    color: #428bca!important;
+    color: #42B3FF!important;
 }
 a:hover {
     color: blue;
@@ -708,7 +722,7 @@ p.source {
     color: #555;
 }
 p.source span {
-    color: #428bca;
+    color: #42B3FF;
 }
 .font-sizer img {
     border: 0;
@@ -722,3 +736,42 @@ p.source span {
     background: #6f6f6f;
     border-radius: 5px;
 }
+
+.button {
+    &.dark-single {
+        --background: none;
+        --rectangle: #242836;
+        --success: #4BC793;
+    }
+    &.white-single {
+        --background: none;
+        --rectangle: #F5F9FF;
+        --arrow: #275efe;
+        --success: #275efe;
+        --shadow: rgba(10, 22, 50, .1);
+    }
+    &.dark {
+        --background: #242836;
+        --rectangle: #1C212E;
+        --arrow: #F5F9FF;
+        --text: #F5F9FF;
+        --success: #2F3545;
+    }
+}
+
+.download-button {
+    background: #42B3FF;
+    border-radius: 3px;
+color: #fff;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding:16px;
+height: 40px;
+border-color: #42B3FF;
+
+}
+
+
+
+

@@ -63,7 +63,7 @@
     dw_Event.add( window, 'load', dw_fontSizerDX.init );
     </script>
   </head>
-  <body>
+  <body onload="selectTheme()">
     <header id="header" role="banner">
       <div id="headermenu" role="navigation">
         <div class="about">
@@ -72,9 +72,7 @@
         <div class="htmledito-settings">
           <p class="theme-option"><span>Tema:</span>
             <select onchange="selectTheme()" id=select>
-              <option selected>predeterminado</option>
-              <option>3024-day</option>
-              <option>blackboard</option>
+              <option selected >blackboard</option>
               <option>cobalt</option>
               <option>eclipse</option>
               <option>mbo</option>

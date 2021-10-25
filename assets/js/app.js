@@ -17,7 +17,7 @@ function selectTheme() {
 // theme selection
 function selectTheme() {
     // var e = input.options[input.selectedIndex].innerHTML;
-    var e = 'monokai';
+    var e = 'blackboard';
      codeeditorhtml.setOption("theme", e);
      codeeditorcss.setOption("theme", e);
      codeeditorjs.setOption("theme", e)

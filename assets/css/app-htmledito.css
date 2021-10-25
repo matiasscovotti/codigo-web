@@ -54,6 +54,10 @@ select {
     outline: none;
     text-outline: none;
 }
+#wrapper,#loader,#header {
+  width: 100%;
+  overflow: hidden;
+}
 
 .htmledito a {
     text-decoration: none;
@@ -132,21 +136,34 @@ hr {
     width: 100%;
     height: 90%;
 }
-
+#header {
+    color: #555;
+    font-size: 13px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 8px rgba(0,0,0,0.07);
+    webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1000;
+}
 #settingsmenubutton,
 #librarymenubutton,
-#downloadbutton,
 #runcodebutton {
-    background: #4F36D6;
-    color: white;
-    box-shadow: none;
-    line-height: 1;
-    padding: 16px 20px;
+    margin: 0 0 0 -5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #555;
+    height: 50px;
+    border: 0;
+    background: transparent;
     cursor: pointer;
-    line-height: 1;
-    font-weight: 200;
-    border-radius: 4px;
-    margin-top: 2px;
 }
 #previewcompact {
     background: url('../images/icons.png') no-repeat;
@@ -457,7 +474,9 @@ only screen and (min-resolution:2dppx) {
 }
 .about {
     float: left;
-
+    margin-top: -2px;
+    margin-right: 20px;
+    font-size: 1.2em;
 }
 #Dmenu-right {
     margin-top: 7px;
@@ -484,12 +503,6 @@ only screen and (min-resolution:2dppx) {
 div.htmledito-settings {
     float: left;
 }
-div.download-button {
-    float: left;
-}
-div.run-button {
-    float: left;
-}
 div.htmledito-settings select {
     font-size: 1em;
 
@@ -501,13 +514,14 @@ select, .htmledito-settings select {
     color: #777;
 }
 
-
-#downloadbutton:hover,
+#runcodebutton {
+    padding: 5px 15px;
+    margin: 0 5px;
+}
 #runcodebutton:hover {
-    background: #091069;
+    background: #428bca;
     color: white;
 }
-#downloadbutton:active,
 #runcodebutton:active {
     color: #555;
 }
@@ -545,13 +559,13 @@ div.font-sizer img:hover {
 }
 a {
     text-decoration: none!important;
-    color: #555!important;
+    color: #428bca!important;
 }
 a:hover {
     color: blue;
 }
 .codetypelabel {
-    padding: 0.5em;
+    padding: 1em;
 
 }
 div.CodeMirror-vscrollbar::-webkit-scrollbar {
@@ -583,8 +597,17 @@ div.CodeMirror-hscrollbar::-webkit-scrollbar-track {
     border-radius: 10px;
     -webkit-box-shadow: 0 0 6px gray inset;
 }
-
-
+#headermenu {
+    margin-left: 10px;
+    float: left;
+}
+#headermenu .font-sizer,
+#headermenu #revisionbox,
+#headermenu .run-button,
+#headermenu .font-sizer,
+#headermenu .generatormenu {
+    float: left;
+}
 #Dmenu-right {
     float: right;
 }
@@ -599,7 +622,6 @@ div.CodeMirror-hscrollbar::-webkit-scrollbar-track {
     }
     .htmledito-settings span,
     #runcodebutton,
-    #downloadbutton,
     #settingsmenubutton {
         display: none;
     }

@@ -7,18 +7,17 @@
     <title>Programación - EDUCABOT</title>
     <meta name="description" content="Editor HTML"/>
 
-    <!-- ========== Favicon Icon ========== -->
+    <!-- icons -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">    
-    <!--  fontawesome css plugins -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-	<!-- menu material -->
-	<link href="menu/base.min.css" rel="stylesheet">
 
+    <!-- Social -->
+    
     <link href="assets/js/vendor/jquery.splitter/css/jquery.splitter.css" rel="stylesheet"/>
     <!-- gray theme - splitter
     <link href="assets/js/vendor/jquery.splitter/css/clean.jquery.splitter.css" rel="stylesheet"/> -->
     <script src="assets/js/vendor/jquery/jquery.min.js"></script>
     <script src="assets/js/vendor/jquery.splitter/js/splitter.js"></script>
+
     <script src="node_modules/codemirror/lib/codemirror.js"></script>
     <script src="node_modules/codemirror/mode/xml/xml.js"></script>
     <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
@@ -34,7 +33,6 @@
     <script src="node_modules/nprogress/nprogress.js"></script>
 
     <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css"/>
-    <link rel="stylesheet" href="node_modules/codemirror/theme/blackboard.css"/>
     <link rel="stylesheet" href="assets/css/app-htmledito.css">
     <link href="node_modules/nprogress/nprogress.css" rel="stylesheet"/>
 
@@ -54,113 +52,106 @@
     dw_Event.add( window, 'load', dw_fontSizerDX.init );
     </script>
   </head>
- <body  style=" overflow: hidden; width: 100%;   ">
-    
-    <header class="header header-transparent header-waterfall ui-header" id="header" role="banner">
-  <!--      <ul class="nav nav-list pull-left">
-        <li>
-            <a data-toggle="menu" href="#ui_menu">
-                <span class="icon icon-lg">menu</span>
-            </a>
-        </li>
-    </ul> -->
-    <div id="headermenu" role="navigation">
+  <body>
+
+    <header id="header" role="banner">
+      <div id="headermenu" role="navigation">
         <div class="about">
-            <a href="index.html">
-                <img src="assets/images/logo2.svg" alt="Educabot" style="padding-top: 3px; padding-left: 10px; padding-right: 20px;max-height: 48px;">
-            </a>  
+          <img src="assets/images/logo2.svg" alt="Educabot" style="padding-top: 3px; padding-left: 10px; padding-right: 20px;max-height: 48px;">
         </div>
-        <div class="font-sizer" style="padding-right: 20px;">
-          <span id="sizer">Tamaño de letra:&nbsp;&nbsp;
-            <a class="increase" href="#" title="Agrandar letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a>
-            <a class="decrease" href="#" title="Achicar letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a>
-            <a class="reset" href="#" title="Restaurar tamaño de letra"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
-        </div>
-    </div>
-    <div class="download-button">
-      <input type="button" value="Descargar proyecto" onClick="download();" id="downloadbutton" class="topmenubutton">
-    </div>
- <!--   <div class="col-xl-2 col-lg-2 d-none d-lg-block text-right">
         <div class="run-button">
-          <button value="Ejecutar (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">Ejecutar (JS)&nbsp; <i class="far fa-play-circle"></i></button>
-        </div> -->
-   
-  </header>
-<!--
-<nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
-    <div class="menu-scroll">
-        <div class="menu-content">
-            <a class="menu-logo" href="index.html">Índice</a>
-            <ul class="nav">
-                <li>
-                    <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_1">Proyectos</a>
-                    <ul class="menu-collapse collapse" id="ui_menu_1">
-                        <li>
-                            <a class="waves-attach" href="1.html"><span class="icon">videocam</span> Introducción</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="2.html"><span class="icon">videocam</span> ¿Qué es la robótica?</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="3.html"><span class="icon">description</span>Actividad 1</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="4.html"><span class="icon">videocam</span> Partes del robot</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="5.html"><span class="icon">description</span>Componentes del kit</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="3333.html"><span class="icon">description</span>Actividad 2</a>
-                        </li>
-                    </ul>
-                    <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_2">Refencias</a>
-                    <ul class="menu-collapse collapse" id="ui_menu_2">
-                        <li>
-                            <a class="waves-attach" href="1.html"><span class="icon">videocam</span> Introducción</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="2.html"><span class="icon">videocam</span> ¿Qué es la robótica?</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="3.html"><span class="icon">description</span>Actividad 1</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="4.html"><span class="icon">videocam</span> Partes del robot</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="5.html"><span class="icon">description</span>Componentes del kit</a>
-                        </li>
-                        <li>
-                            <a class="waves-attach" href="3333.html"><span class="icon">description</span>Actividad 2</a>
-                        </li>
-                    </ul>
-                </li>
-			</ul>
+          <input type="button" value="Descargar proyecto" onClick="download();" id="downloadbutton" class="topmenubutton">
         </div>
-    </div>
-</nav>
--->
+        <div class="font-sizer">
+          <span id="sizer">Fuente:&nbsp;&nbsp;<a class="increase" href="#" title="Increase text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a><a class="decrease" href="#" title="Decrease text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a><a class="reset" href="#" title="Restore default font-sizes"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+        </div>
+        <div class="run-button">
+          <input type="button" value="Run (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">
+        </div>
+
+        <div class="generatormenu">
+          <input type="button" value="Library"  id="librarymenubutton" class="topmenubutton">
+          <div id="librarymenu"  class="topmenu">
+            <div class="css-libraries">
+              <div>Texto | Imagenes | Audio | Video</div>
+              <input type="button" value="Lorem" id="generator-ipsum">
+              <input type="button" value="&lt;img src&gt; 1" id="insert-img-src1">
+              <input type="button" value="&lt;img src&gt; 2" id="insert-img-src2">
+              <input type="button" value="&lt;audio&gt;" id="insert-audio">
+              <input type="button" value="&lt;video&gt;" id="insert-video">
+            </div>
+
+            <div class="css-libraries">
+              <div>Librerías CSS</div>
+              <input type="button" value="url(image)" id="insert-url-img">
+              <!-- add custom CSS Library -->
+              <input type="button" value="normalize.css" id="normalizecss">
+              <!-- Bootstrap 3    // This is bootstrap library Example in library.js file-->
+              <input type="button" value="Bootstrap 3" id="bootstrap3">
+              <input type="button" value="Bootstrap 4" id="bootstrap4">
+              <input type="button" value="uikit 2" id="uikit2">
+              <input type="button" value="uikit 3" id="uikit3">
+              <br/>
+              <input type="button" value="foundation" id="foundation">
+              <input type="button" value="Bulma" id="bulma">
+              <input type="button" value="Materialize" id="materialize">
+              <input type="button" value="Semantic UI" id="semanticui">
+              <input type="button" value="MDL" id="mdl" title="Material Design Lite">
+              <input type="button" value="Font Awesome" id="fontawesome">
+            </div>
+
+            <div class="js-libraries jquery">
+              <div>Librerías JavaScript</div>
+              <!-- add custom Javascript Library -->
+              <input type="button" value="jQuery 1x" id="jquery1">
+              <input type="button" value="jQuery 2x" id="jquery2">
+              <input type="button" value="jQuery 3x" id="jquery3">
+              <input type="button" value="jQuery UI" id="jqueryui">
+              <input type="button" value="MooTools" id="MooTools">
+            </div>
+          </div>
+
+          <input type="button" value="Settings"  id="settingsmenubutton" class="topmenubutton">
+          <div id="settingsmenu"  class="topmenu">
+            <ul>
+              <li><input type="checkbox"  id="autopreviewcheckbox" checked="checked" /> Auto Run Js</li>
+              <li><input type="checkbox"  id="linewrappingcheckbox"/> Word Wrap</li>
+              <li><input type="checkbox"  id="autoclosetagscheckbox" checked="checked"/> Auto Close Tag</li>
+              <li><input type="checkbox"  id="layerpreview" /> Highlight Layer Mode</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="Dmenu-right">
+          <input type="button" id="previewcompact" value="&nbsp;" title="compact view" onClick="previewdefault();" />
+          <input type="button" id="previewnojs" value="&nbsp;" title="no js editor" onClick="nojsview();" />
+          <input type="text" value="" id="previewsizewidth" placeholder="Width" />
+          <input type="text" value="" id="previewsizeheight" placeholder="Height" />
+          <input type="button" id="fullpreview" value="&nbsp;" onClick="fullpreview();" />
+          <input type="button" id="previewtablet" value="&nbsp;" onClick="previewdefault();" />
+          <input type="button" id="previewphone-h" value="&nbsp;" onClick="previewdefault();" />
+          <input type="button" id="previewphone-w" value="&nbsp;" onClick="previewdefault();" />
+      </div>
+  </header>
   <main id="content" class="article">
     <div id="widget">
       <div id="foo">
         <div id="codehtml">
           <div class="codetypelabel" id="codetypelabelhtml">HTML</div>
           <textarea id="codeeditorhtml" name="codeeditorhtml">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</textarea>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;</textarea>
         </div>
 
         <div id="codecss">
           <div class="codetypelabel" id="codetypelabelcss">CSS</div>
           <textarea id="codeeditorcss" name="codeeditorcss">
-/* CSS */
-
+/* CSS code */
 
 
           </textarea>
@@ -169,13 +160,13 @@
       <div id="bar">
         <div id="codejs">
           <div class="codetypelabel" id="codetypelabeljs">JavaScript</div>
-          <textarea id="codeeditorjs" name="codeeditorjs">// JavaScript
+          <textarea id="codeeditorjs" name="codeeditorjs">// JavaScript code
 
 </textarea>
         </div>
         <div id="codepreview">
           <div id="previewmask"></div>
-          <div id="previewoutputsize">Proyecto: <span id="outputsizenumber"></span></div>
+          <div id="previewoutputsize">Output: <span id="outputsizenumber"></span></div>
           <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
         </div>
       </div>
@@ -184,8 +175,6 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/library.js"></script>
-  <script src="menu/base.min.js"></script>
-  <script src="menu/project.min.js"></script>
   <script>
 
         var HideMenuDialog = function(){
@@ -195,5 +184,8 @@
         $('textarea')
             .focus(HideMenuDialog)
   </script>
+
+
+
   </body>
 </html>

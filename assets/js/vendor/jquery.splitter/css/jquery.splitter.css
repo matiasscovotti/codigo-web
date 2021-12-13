@@ -19,14 +19,14 @@
   position: relative;
 }
 .splitter_panel .vsplitter {
-    background-color: #FF6428;
+    background-color: #42B3FF;
     cursor: col-resize;
     z-index:900;
     width: 7px;
 }
 
 .splitter_panel .hsplitter {
-    background-color: #FF6428;
+    background-color: #42B3FF;
     cursor: row-resize;
 
     height: 7px;

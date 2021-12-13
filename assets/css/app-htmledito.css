@@ -757,14 +757,14 @@ p.source span {
 
 .download-button {
     margin-top: 6px;
-    background: #42B3FF;
+    background: #2A205E;
     border-radius: 3px;
 color: #fff;
 display: flex;
 flex-direction: row;
 align-items: center;
 padding:8px;
-border-color: #42B3FF;
+border-color: #2A205E;
 border-style: none;
 cursor: pointer;
 margin-right: 30px;
@@ -774,14 +774,14 @@ margin-right: 30px;
 
 .download-button:hover {
     margin-top: 6px;
-    background: #2A205E;
+    background: #42B3FF;
     border-radius: 3px;
 color: #fff;
 display: flex;
 flex-direction: row;
 align-items: center;
 padding:8px;
-border-color: #2A205E;
+border-color: #42B3FF;
 border-style: none;
 cursor: pointer;
 margin-right: 30px;
